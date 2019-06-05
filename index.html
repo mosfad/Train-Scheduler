@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Put the Bootstrap cdn for js last because I was getting an Uncaught TypeError: Cannot read property 'fn' of undefined.-->
+    
+
+   <!-- jQuery Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <!--  Moment.js reference  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<div class="container">
+    <div class="jumbotron bg-dark text-white">
+        <h1 class="display-4 text-center">Anytime is Train Time</h1>
+        <h3 class="text-center">Choo Choo. Chee Chee. </h3>
+    </div>
+
+    
+    <div class="card">
+            <div class="card-header">
+              Current Train Schedule
+            </div>
+            <div class="card-body">
+
+              <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Train Name<th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+                </thead>
+                <tbody>
+           
+                </tbody>
+            </table>
+        </div>
+    </div>
+<br>
+    <form>
+        <div class="card">
+            <div class="card-header">
+                      Add Employee
+                    </div>
+    <div class="card-body">
+        <div class="form-group">
+              <label for="name-input">Train Name</label>
+              <input type="text" class="form-control" id="name-input">
+            </div>
+            <div class="form-group">
+              <label for="dest-input">Destination</label>
+              <input type="text" class="form-control" id="dest-input">
+            </div>
+            <div class="form-group">
+              <label for="time-input">First Train Time (HH:mm - military time)</label>
+              <input type="text" class="form-control" id="time-input">
+            </div>
+            <div class="form-group">
+              <label for="freq-input">Frequency (min)</label>
+              <input type="number" class="form-control" id="freq-input">
+            </div>
+            <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+          </form>
+   
+</div>    
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/logic.js"></script>
+
+
+
+</body>
+</html>
+Collapse
