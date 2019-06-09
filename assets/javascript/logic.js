@@ -90,9 +90,10 @@ database.ref().on("child_added", function(childSnapshot) {
     //calculate the next arrival time, based on current time.
     nextArrival = calculateArrival(tFreqInt, fTime);
     console.log(nextArrival.format("HH:mm"));
-    console.log(nextArrival.diff(moment(), "minutes"));
-    //calculate the number of minutes the next train will take to arrive.
-    minAway = nextArrival.diff(moment(), "minutes"); //SEEMS LIKE MY "minAway" is about a minute off?????
+    console.log(nextArrival.diff(moment(), "minutes", true));
+    //calculate the number of minutes the next train will take to arrive. 
+    minAway = nextArrival.diff(moment(), "minutes"); 
+    //Note that moment.diff() truncates decimal places. That's why minAway seems to be off by 1 minute.
     console.log("The next train is " + minAway + " minutes away");
     addTrainSchedule(childSnapshot.val().trainName, childSnapshot.val().trainDest, childSnapshot.val().trainFreq, nextArrival.format("hh:mm A"), minAway);
 
