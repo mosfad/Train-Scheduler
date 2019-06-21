@@ -8,9 +8,14 @@ The app helps administrators manage the schedule for any train. It also helps th
 
 *Please note that the program uses a Firebase as its data base.* This makes the train's schedule data persist, even when the browser is refreshed. 
 
+### Deployed App
+https://mosfad.github.io/Train-Scheduler/
+
 ### Contact me about Train-Scheduler app
 maafadina@gmail.com
 
 
 ### Contributors 
 Modupe Fadina
+
+
